@@ -1,0 +1,14 @@
+# import required packages and libraries
+import numpy as np
+import pandas as pd
+import las
+
+# Initialize dataframe to temporarily store the data
+well = las.LASReader('Logs/42706404020000.las').data
+well = pd.DataFrame(well)
+
+#Display the data
+well.head()
+
+#Export Data
+well.to_csv(r'C:\Users\melom\Favorites\PYTHON\ML\DatPrep\CSV\42706404020000.csv', index = False)
